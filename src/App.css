@@ -18,10 +18,7 @@
 .App-logo {
     width: 180px;
 }
-.App-logo2 {
-    width: 80px;
 
-}
 .body{
     display: flex;
     flex-direction: row;
@@ -97,6 +94,13 @@
     padding-top: 10px;
 }
 @media only screen and (min-width: 851px) {
+    .nav-barMobile{
+        display: none;
+    }
+    .App-logo2 {
+        display: none;
+
+    }
     .nav-bar {
         display: flex;
         flex-direction: column;
@@ -158,8 +162,18 @@
     }
 }
 @media only screen and (max-width: 850px) {
-    .nav-bar {
+    .App-logo2 {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 50px;
+        height: auto;
+    }
+    .nav-barMobile {
+        display: flex;
+    }
+    .nav-bar {
+        display: block;
         flex-direction: column;
         align-items: flex-start;
         width: 100px;
