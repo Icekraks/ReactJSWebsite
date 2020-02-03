@@ -13,7 +13,6 @@
     background-color: #34a1eb;
     align-items: center;
     justify-content: center;
-    padding-left: 160px;
 
 }
 .App-logo {
@@ -44,6 +43,19 @@
     border: 1px solid rgba(255,255,255, 0.25);
     border-radius: 20px;
 }
+.RSButton:hover{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.7);
+    padding: 9px 10px;
+    border: 1px solid rgba(0,0,0, 0.25);
+    border-radius: 20px;
+}
 .navButton {
     display: flex;
     flex: 1;
@@ -58,7 +70,20 @@
     border-radius: 20px;
     outline: none;
 }
-
+.navButton:hover {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.7);
+    padding: 9px 10px;
+    border: 1px solid rgba(0,0,0, 0.25);
+    border-radius: 20px;
+    outline: none;
+}
 
 .flex-container {
     display: flex;
@@ -71,7 +96,7 @@
     border-right: 1px solid black ;
     padding-top: 10px;
 }
-@media only screen and (min-width: 651px) {
+@media only screen and (min-width: 851px) {
     .flex-container {
         display: flex;
         flex-direction: column;
@@ -96,8 +121,43 @@
         border-radius: 20px;
         outline: none;
     }
+    .navButton:hover {
+        display: flex;
+        flex: 1;
+        width: 100%;
+        font-size: 17px;
+        font-weight: 600;
+        color: black;
+        text-transform: uppercase;
+        background: rgba(255,255,255,255.7);
+        padding: 9px 10px;
+        border: 1px solid rgba(0,0,0, 0.25);
+        border-radius: 20px;
+        outline: none;
+    }
+    .columnBody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 1;
+        font-size: 18px;
+    }
+    .RSButton{
+        display: flex;
+        flex: 1;
+        width: 100%;
+        font-size: 17px;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+        background: rgba(0,0,0,0.7);
+        padding: 9px 10px;
+        border: 1px solid rgba(255,255,255, 0.25);
+        border-radius: 20px;
+    }
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 850px) {
     .flex-container {
         display: flex;
         flex-direction: column;
@@ -122,49 +182,20 @@
         border-radius: 10px;
         outline: none;
     }
-
-}
-.rowBody {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex: 1;
-}
-.columnBody {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    flex: 1;
-
-}
-
-@media only screen and (min-width: 851px) {
-    .columnBody {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        flex: 1;
-        font-size: 18px;
-    }
-    .RSButton{
+    .navButton:hover {
         display: flex;
         flex: 1;
         width: 100%;
-        font-size: 17px;
+        font-size: 8px;
         font-weight: 600;
-        color: white;
+        color: black;
         text-transform: uppercase;
-        background: rgba(0,0,0,0.7);
-        padding: 9px 10px;
-        border: 1px solid rgba(255,255,255, 0.25);
-        border-radius: 20px;
+        background: rgba(255,255,255,0.7);
+        padding: 5px 5px;
+        border: 1px solid rgba(0,0,0, 0.25);
+        border-radius: 10px;
+        outline: none;
     }
-}
-@media only screen and (max-width: 850px) {
     .columnBody {
         display: flex;
         flex-direction: column;
@@ -186,4 +217,21 @@
         border: 1px solid rgba(255,255,255, 0.25);
         border-radius: 10px;
     }
+
+}
+.rowBody {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex: 1;
+}
+.columnBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+
 }

@@ -29,7 +29,7 @@ function App() {
                         <Button id="RSButton" label="Play Fucking Runescape." link ="https://oldschool.runescape.com/"/>
                     </div>
                     <div className="rowBody">
-                        <Button id="memes" label="Click for Meme." link = "https://i.kym-cdn.com/photos/images/original/001/700/569/1c4.jpg"/>
+                        <Button id="RSButton" label="Click for Meme." link = "https://i.kym-cdn.com/photos/images/original/001/700/569/1c4.jpg"/>
                     </div>
 
                 </div>
