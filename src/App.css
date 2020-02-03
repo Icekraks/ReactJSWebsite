@@ -85,7 +85,7 @@
     outline: none;
 }
 
-.flex-container {
+.nav-bar {
     display: flex;
     position: fixed;
     flex-direction: column;
@@ -97,7 +97,7 @@
     padding-top: 10px;
 }
 @media only screen and (min-width: 851px) {
-    .flex-container {
+    .nav-bar {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -158,7 +158,7 @@
     }
 }
 @media only screen and (max-width: 850px) {
-    .flex-container {
+    .nav-bar {
         display: flex;
         flex-direction: column;
         align-items: flex-start;

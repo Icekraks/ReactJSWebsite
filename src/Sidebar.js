@@ -3,7 +3,9 @@ import {Button} from './Button';
 import {Container, Col, Row} from 'reactstrap';
 
 
-
+/*
+    Creates a sidebar based on an array of values, parsed into the class and creates an array of buttons.
+ */
 export class Sidebar extends React.Component{
 
     render(){

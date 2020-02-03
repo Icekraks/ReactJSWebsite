@@ -19,8 +19,11 @@ function App() {
                 <img src={logo} className="App-logo" alt="logo" />
 
             </div>
+            /*
+             * body, Everything below the header/banner is contained in the body class.
+             */
             <div className="body">
-                <div className='flex-container'>
+                <div className='nav-bar'>
                     <Sidebar items={items}/>
                     {/*<img src={logo2} className="App-logo2" alt="logo" />*/}
                 </div>
