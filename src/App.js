@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './Logo.png';
+// import logo2 from './Assets/meme.jpg';
 import './App.css';
 import {Button} from './Button';
 import {Sidebar} from './Sidebar';
@@ -14,12 +15,14 @@ function App() {
     return (
         <div className="App">
             <div className="App-header">
+
                 <img src={logo} className="App-logo" alt="logo" />
+
             </div>
             <div className="body">
                 <div className='flex-container'>
                     <Sidebar items={items}/>
-
+                    {/*<img src={logo2} className="App-logo2" alt="logo" />*/}
                 </div>
                 <div className="columnBody">
                     <div className="rowBody">
