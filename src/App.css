@@ -4,7 +4,8 @@
     height: 100vh;
     width: 100vw;
     background: #282c34;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .App-header {
@@ -24,82 +25,25 @@
     flex-direction: row;
     background: url("Assets/bruh.jpeg") center no-repeat;
     background-size: 100%;
-    min-height: 20vh;
     height: 100%;
-}
-.RSButton{
-    display: flex;
-    flex: 1;
     width: 100%;
-    font-size: 17px;
-    font-weight: 600;
-    color: white;
-    text-transform: uppercase;
-    background: rgba(0,0,0,0.7);
-    padding: 9px 10px;
-    border: 1px solid rgba(255,255,255, 0.25);
-    border-radius: 20px;
-}
-.RSButton:hover{
-    display: flex;
-    flex: 1;
-    width: 100%;
-    font-size: 17px;
-    font-weight: 600;
-    color: black;
-    text-transform: uppercase;
-    background: rgba(255,255,255,0.7);
-    padding: 9px 10px;
-    border: 1px solid rgba(0,0,0, 0.25);
-    border-radius: 20px;
-}
-.navButton {
-    display: flex;
-    flex: 1;
-    width: 100%;
-    font-size: 17px;
-    font-weight: 600;
-    color: white;
-    text-transform: uppercase;
-    background: rgba(0,0,0,0.7);
-    padding: 9px 10px;
-    border: 1px solid rgba(255,255,255, 0.25);
-    border-radius: 20px;
-    outline: none;
-}
-.navButton:hover {
-    display: flex;
-    flex: 1;
-    width: 100%;
-    font-size: 17px;
-    font-weight: 600;
-    color: black;
-    text-transform: uppercase;
-    background: rgba(255,255,255,0.7);
-    padding: 9px 10px;
-    border: 1px solid rgba(0,0,0, 0.25);
-    border-radius: 20px;
-    outline: none;
 }
 
-.nav-bar {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 160px;
-    height: 100%;
-    background-color: #282c34;
-    border-right: 1px solid black ;
-    padding-top: 10px;
-}
+
+
 @media only screen and (min-width: 851px) {
     .nav-barMobile{
         display: none;
     }
+    .sidebar-mobile {
+        display:none;
+    }
     .App-logo2 {
         display: none;
 
+    }
+    .navButtonM {
+        display:none;
     }
     .nav-bar {
         display: flex;
@@ -109,7 +53,7 @@
         height: 100%;
         background-color: #282c34;
         border-right: 1px solid black ;
-        padding-top: 10px;
+
     }
     .navButton {
         display: flex;
@@ -124,6 +68,9 @@
         border: 1px solid rgba(255,255,255, 0.25);
         border-radius: 20px;
         outline: none;
+        align-items: baseline;
+        justify-content: space-around;
+        margin: 5px 0 0 10px;
     }
     .navButton:hover {
         display: flex;
@@ -138,7 +85,10 @@
         border: 1px solid rgba(0,0,0, 0.25);
         border-radius: 20px;
         outline: none;
+        align-items: baseline;
+        justify-content: space-around;
     }
+
     .columnBody {
         display: flex;
         flex-direction: column;
@@ -160,29 +110,40 @@
         border: 1px solid rgba(255,255,255, 0.25);
         border-radius: 20px;
     }
+    .RSButton:hover{
+        display: flex;
+        flex: 1;
+        width: 100%;
+        font-size: 17px;
+        font-weight: 600;
+        color: black;
+        text-transform: uppercase;
+        background: rgba(255,255,255,255.7);
+        padding: 9px 10px;
+        border: 1px solid rgba(0,0,0, 0.25);
+        border-radius: 20px;
+    }
 }
 @media only screen and (max-width: 850px) {
     .App-logo2 {
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         max-width: 50px;
         height: auto;
+        margin: 10px 0 0 10px;
     }
-    .nav-barMobile {
+    .sidebar-buttons-mobile{
+        flex-direction: row;
+    }
+    .nav-barMobile{
         display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 10px;
     }
-    .nav-bar {
-        display: block;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100px;
-        height: 100%;
-        background-color: #282c34;
-        border-right: 1px solid black ;
-        padding-top: 10px;
-    }
-    .navButton {
+    .navButtonM {
         display: flex;
         flex: 1;
         width: 100%;
@@ -195,8 +156,11 @@
         border: 1px solid rgba(255,255,255, 0.25);
         border-radius: 10px;
         outline: none;
+        align-items: baseline;
+        justify-content: space-around;
+        margin: 5px 0 0 0;
     }
-    .navButton:hover {
+    .navButtonM:hover{
         display: flex;
         flex: 1;
         width: 100%;
@@ -209,6 +173,17 @@
         border: 1px solid rgba(0,0,0, 0.25);
         border-radius: 10px;
         outline: none;
+        align-items: baseline;
+        justify-content: space-around;
+    }
+    .nav-bar {
+        display: none;
+    }
+    .navButton {
+        display: none;
+    }
+    .navButton:hover {
+        display: none;
     }
     .columnBody {
         display: flex;
@@ -229,6 +204,19 @@
         background: rgba(0,0,0,0.7);
         padding: 5px 5px;
         border: 1px solid rgba(255,255,255, 0.25);
+        border-radius: 10px;
+    }
+    .RSButton:hover{
+        display: flex;
+        flex: 1;
+        width: 100%;
+        font-size: 8px;
+        font-weight: 600;
+        color: black;
+        text-transform: uppercase;
+        background: rgba(255,255,255,255.7);
+        padding: 5px 5px;
+        border: 1px solid rgba(0,0,0, 0.25);
         border-radius: 10px;
     }
 

@@ -12,37 +12,73 @@ const items = [
     {Buttonlabel: 'Twitter',id:'navButton',link:'https://twitter.com/OfficialIcekrak'},
     {Buttonlabel: 'Github',id:'navButton',link:'https://github.com/Icekraks'}
 ];
+const itemsM = [
+    {Buttonlabel: 'Home',id:'navButtonM',link: null},
+    {Buttonlabel: 'Youtube',id:'navButtonM',link: 'https://www.youtube.com/c/IcekraksOfficial'},
+    {Buttonlabel: 'Instagram',id:'navButtonM',link: 'https://www.instagram.com/icekraks/'},
+    {Buttonlabel: 'Twitter',id:'navButtonM',link:'https://twitter.com/OfficialIcekrak'},
+    {Buttonlabel: 'Github',id:'navButtonM',link:'https://github.com/Icekraks'}
+];
 //body, Everything below the header/banner is contained in the body class.
-function App() {
-    return (
-        <div className="App">
-            <div className="App-header">
+export class App extends React.Component {
 
-                <img src={logo} className="App-logo" alt="logo" />
+    constructor(){
+        super();
+
+        this.state = {
+            navBarVisible: false
+        };
+    }
+
+    toggleNavBar = () =>{
+        this.setState( {
+            navBarVisible: !this.state.navBarVisible
+
+        });
+        console.log("Swapped State");
+    };
+
+    render() {
+        return (
+            <div className="App">
+                <div className="App-header">
+
+                    <img src={logo} className="App-logo" alt="logo"/>
+
+                </div>
+
+                <div className="body">
+
+                    <div className='nav-bar'>
+                        <Sidebar className='sidebar-Buttons' items={items}/>
+                    </div>
+                    <div className='nav-bar-mobile'>
+                        <img src={logo2} className="App-logo2" alt="logo" onClick={this.toggleNavBar}/>
+                        {!this.state.navBarVisible && <Sidebar className='sidebar-Buttons-mobile' items={itemsM}/>}
+                    </div>
+                    <div className="columnBody">
+
+                        <div className="rowBody">
+                            <Button id="RSButton" label="Play Fucking Runescape."
+                                    link="https://oldschool.runescape.com/"/>
+                        </div>
+                        <div className="rowBody">
+                            <Button id="RSButton" label="Click for Meme." link="http://www.jsfuck.com/"/>
+                        </div>
+                        <div className="rowBody">
+                            <iframe title="Videos" width="560" height="315" src="https://www.youtube.com/embed/h9y2FXOcZl0"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen>
+
+                            </iframe>
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
-
-            <div className="body">
-                <div className='nav-bar-mobile'>
-                    <img src={logo2} className="App-logo2" alt="logo" />
-                </div>
-                <div className='nav-bar' >
-                    <Sidebar items={items}/>
-                </div>
-
-                <div className="columnBody">
-                    <div className="rowBody">
-                        <Button id="RSButton" label="Play Fucking Runescape." link ="https://oldschool.runescape.com/"/>
-                    </div>
-                    <div className="rowBody">
-                        <Button id="RSButton" label="Click for Meme." link = "https://i.kym-cdn.com/photos/images/original/001/700/569/1c4.jpg"/>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    );
+        );
+    }
 }
 
-export default App;
