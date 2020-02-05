@@ -47,7 +47,7 @@
     flex: 1;
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1024px) {
     .nav-barMobile{
         display: none;
     }
@@ -139,30 +139,35 @@
         height:315px;
     }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
     .App-logo2 {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
         max-width: 50px;
         height: auto;
         margin: 10px 10px 10px 10px;
     }
-    .sidebar-buttons-mobile{
+    .sidebar-Buttons-mobile{
+        display: flex;
         flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
     }
     .nav-barMobile{
         display: flex;
         flex-direction: row;
         width: 100%;
         margin: 10px;
+        justify-content: flex-start;
     }
     .navButtonM {
         display: flex;
         flex: 1;
         width: 100%;
-        font-size: 8px;
+        font-size: 10px;
         font-weight: 600;
         color: white;
         text-transform: uppercase;
@@ -173,13 +178,13 @@
         outline: none;
         align-items: baseline;
         justify-content: space-around;
-        margin: 5px 0 0 0;
+        margin: 0 40px 0 0;
     }
     .navButtonM:hover{
         display: flex;
         flex: 1;
         width: 100%;
-        font-size: 8px;
+        font-size: 10px;
         font-weight: 600;
         color: black;
         text-transform: uppercase;
@@ -235,15 +240,26 @@
     }
 
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
 
     .myVideo {
         width:354px;
         height:200px;
     }
-}
-@media only screen and (max-width: 768px) {
+    .navButtonM{
+        font-size: 10px;
+        margin: 0 60px 0 0;
+    }
+    .navButtonM:hover{
+        font-size: 10px;
+        margin: 0 60px 0 0;
 
+    }
+}
+@media only screen and (max-width: 767px) {
+    .rowBody {
+        flex-direction: column;
+    }
     .myVideo {
         width:142px;
         height:80px;
@@ -262,8 +278,77 @@
         flex-direction: column;
     }
     .myVideo {
-        width:177px;
-        height:100px;
+        width: 354px;
+        height:200px;
+    }
+    .App-logo2 {
+        margin: 2px 8px 2px 2px;
+    }
+    .navButtonM{
+        font-size: 10px;
+        margin: 0 0 0 0;
+    }
+    .navButtonM:hover{
+        font-size: 10px;
+        margin: 0 0 0 0;
+
+    }
+}
+@media only screen and (min-width: 751px) {
+    .RSButton {
+        font-size: 18px;
+    }
+    .myVideo {
+        width:354px;
+        height:200px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .rowBody {
+        flex-direction: column;
+    }
+    .myVideo {
+        width:270px;
+        height:150px;
+    }
+    .App-logo2 {
+        margin: 2px 8px 2px 2px;
+    }
+    .navButtonM{
+        font-size: 10px;
+        margin: 0 0 0 0;
+    }
+    .navButtonM:hover{
+        font-size: 10px;
+        margin: 0 0 0 0;
+
+    }
+
+
+    @media only screen and (max-width: 360px) {
+        .rowBody {
+            flex-direction: column;
+        }
+
+        .myVideo {
+            width: 250px;
+            height: 120px;
+        }
+
+        .App-logo2 {
+            margin: 2px 8px 2px 2px;
+        }
+
+        .navButtonM {
+            font-size: 8px;
+            margin: 0 0 0 0;
+        }
+
+        .navButtonM:hover {
+            font-size: 8px;
+            margin: 0 0 0 0;
+
+        }
     }
 }
 

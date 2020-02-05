@@ -42,30 +42,26 @@ export class App extends React.Component {
     //     var result = await fetch(baseURL+encodeURIComponent("IcekraksIG")).then(res => {return res.text()});
     //     return result;
     // }
-    function openNav(){
 
-    }
-    function closeNav(){
-
-    }
     render() {
         // console.log(this.rsStats());
         return (
             <div className="App">
+
                 <div className="App-header">
 
                     <img src={logo} className="App-logo" alt="logo"/>
 
                 </div>
-
+                <div className='nav-barMobile'>
+                    <img src={logo2} className="App-logo2" alt="logo" onClick={this.toggleNavBar}/>
+                    {!this.state.navBarVisible && <Sidebar className='sidebar-Buttons-mobile' items={itemsM}/>}
+                </div>
                 <div className="body">
                         <div className='nav-bar'>
                             <Sidebar className='sidebar-Buttons' items={items}/>
                         </div>
-                        <div className='nav-bar-mobile'>
-                            <img src={logo2} className="App-logo2" alt="logo" onClick={this.toggleNavBar}/>
-                            {!this.state.navBarVisible && <Sidebar className='sidebar-Buttons-mobile' items={itemsM}/>}
-                        </div>
+
                     <div className="columnBody">
                         <div className="rowBody">
                             <div className="columnBody">
