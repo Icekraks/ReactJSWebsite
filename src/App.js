@@ -4,7 +4,7 @@ import logo2 from './Assets/meme.jpg';
 import './App.css';
 import {Button} from './Button';
 import {Sidebar} from './Sidebar';
-
+// const baseURL = "https://secure.runescape.com/m=hiscore_oldschool/index_lite.ws?player=";
 const items = [
     {Buttonlabel: 'Home', id: 'navButton', link: null},
     {Buttonlabel: 'Youtube', id: 'navButton', link: 'https://www.youtube.com/c/IcekraksOfficial'},
@@ -36,10 +36,20 @@ export class App extends React.Component {
             navBarVisible: !this.state.navBarVisible
 
         });
-        console.log("Swapped State");
     };
 
+    // async rsStats (){
+    //     var result = await fetch(baseURL+encodeURIComponent("IcekraksIG")).then(res => {return res.text()});
+    //     return result;
+    // }
+    function openNav(){
+
+    }
+    function closeNav(){
+
+    }
     render() {
+        // console.log(this.rsStats());
         return (
             <div className="App">
                 <div className="App-header">
@@ -58,19 +68,34 @@ export class App extends React.Component {
                         </div>
                     <div className="columnBody">
                         <div className="rowBody">
-                            <Button id="RSButton" label="Play Fucking Runescape."
+                            <div className="columnBody">
+
+                            </div>
+                            <div className="columnBody">
+                                <Button id="RSButton" label="Play Fucking Runescape."
                                     link="https://oldschool.runescape.com/"/>
+                            </div>
                         </div>
                         <div className="rowBody">
                             <Button id="RSButton" label="Click for Meme." link="http://www.jsfuck.com/"/>
                         </div>
                         <div className="rowBody" >
+                            <div className="columnBody">
                             <iframe title="video" className="myVideo" src="https://www.youtube-nocookie.com/embed/h9y2FXOcZl0"
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen>
 
                             </iframe>
+                            </div>
+                            <div className="columnBody">
+                            <iframe title="video2" className="myVideo" src="https://www.youtube-nocookie.com/embed/jDH-Pn58TYU?"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen>
+
+                            </iframe>
+                            </div>
                         </div>
 
                     </div>
