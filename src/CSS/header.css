@@ -1,0 +1,12 @@
+.App-header {
+    display:flex;
+    position: sticky;
+    flex: 0.15;
+    background-color: #34a1eb;
+    align-items: center;
+    justify-content: center;
+
+}
+.Bannerlogo {
+   width: 230px;
+}

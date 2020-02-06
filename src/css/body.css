@@ -1,0 +1,7 @@
+.body{
+    display: flex;
+    flex-direction: row;
+    /*background: url("Assets/bruh.jpeg") center no-repeat;*/
+    background-size: 100%;
+    flex:1;
+}
